@@ -10,7 +10,7 @@ void sortNP(vector<int> &v){
     }
     if(v[i]>=0)i++;
     if(v[j]<0)j--;
-}
+} 
 }
 int main(){
     vector<int> k;
