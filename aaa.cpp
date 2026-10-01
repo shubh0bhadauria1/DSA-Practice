@@ -27,12 +27,16 @@
 #include<iostream>
 #include<string>
 #include<algorithm>
+#include<sstream>
 using namespace std;
 int main(){
-    int count=0;
-    string str;
+    string str="I am a boy";
     cout<<"Enter String: ";
-    cin>>str;
-    sort(str.begin(),str.end());
-    cout<<str;
+    getline(cin,str);
+    stringstream ss(str);
+    string temp;
+    while(ss>>temp){
+        cout<<temp<<endl;
+    }
+    
 }
