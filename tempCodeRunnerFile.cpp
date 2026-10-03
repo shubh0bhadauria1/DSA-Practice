@@ -1,1 +1,1 @@
-   cout<<j;
+int mid=low+high/2;
