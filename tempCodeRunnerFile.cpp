@@ -1,25 +1,16 @@
 #include<iostream>
+#include<string>
+#include<algorithm>
+#include<sstream>
 using namespace std;
 int main(){
-    int arr[9] = {1,2,4,5,9,15,18,21,24};
-    int n = 9;
-    int x;
-    cout<<"Enter Target: ";
-    cin>>x;
-
-    int lo = 0;
-    int hi = n-1;
-    bool flag = false;
-    while(lo<=hi){
-        int mid = lo + (hi-lo)/2;
-        if(arr[mid]==x){
-            flag = true;
-            cout<<arr[mid-1];
-            break;
-        }
-        else if(arr[mid]<x) lo = mid+1;
-        else hi = mid - 1;
+    string str="I am a boy";
+    cout<<"Enter String: ";
+    getline(cin,str);
+    stringstream ss(str);
+    string temp;
+    while(ss>>temp){
+        cout<<temp<<endl;
     }
-    if(flag==false) cout<<arr[hi];
-
+    
 }

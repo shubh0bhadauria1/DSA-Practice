@@ -1,42 +1,12 @@
-// #include<iostream>
-// #include<string>
-// using namespace std;
-// int main(){
-//     int count=0;
-//     string str;
-//     cout<<"Enter String: ";
-//     cin>>str;
-//     int n=str.length();
-//     for(int i=0;i<n;i++){
-//         if(n==1) break;
-//         if(n==2 && str[0]!=str[1]){ count++;break;}
-//         if(i==0){
-//             if(str[i]!=str[i+1]) count++;
-//         }
-//         else if (i==n-1){
-//             if(str[i]!=str[i-1]) count++;
-//         }
-//         else if (str[i]!=str[i+1] && str[i]!=str[i-1]) count++;
-
-//     }
-//     cout<<"Count: "<<count;
-// }
-
-
-
 #include<iostream>
-#include<string>
-#include<algorithm>
-#include<sstream>
 using namespace std;
+int fib(int n){
+    if(n==1 || n==2) return 1;
+    return fib(n-1) + fib(n-2);
+}
 int main(){
-    string str="I am a boy";
-    cout<<"Enter String: ";
-    getline(cin,str);
-    stringstream ss(str);
-    string temp;
-    while(ss>>temp){
-        cout<<temp<<endl;
-    }
-    
+    int n;
+    cout<<"Enter Nth term: ";
+    cin>>n;
+    cout<<(fib(n));
 }
