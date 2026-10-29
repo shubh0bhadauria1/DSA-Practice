@@ -1,12 +1,21 @@
 #include<iostream>
 using namespace std;
-int fib(int n){
-    if(n==1 || n==2) return 1;
-    return fib(n-1) + fib(n-2);
+class num1{
+protected:
+int a;
+void getA(){
+    cout<<"Enter value of a: ";
+    cin>>a;
 }
+};
+class num2:public num1{
+private:
+    int b;
+    void getB(){
+        cout<<"Enter the valu of b: ";
+        cin>>b;
+    }
+};
 int main(){
-    int n;
-    cout<<"Enter Nth term: ";
-    cin>>n;
-    cout<<(fib(n));
+    
 }
